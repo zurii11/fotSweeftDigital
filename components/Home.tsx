@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import { ActivityIndicator, FlatList, SafeAreaView, StyleSheet, Text, View, Image } from 'react-native';
 import axios from "axios";
-import { NavigationContainer } from '@react-navigation/native';
 
 export default function Home({ navigation }) {
     const [users, setUsers] = useState([]);

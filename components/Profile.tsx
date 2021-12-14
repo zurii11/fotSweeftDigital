@@ -1,4 +1,3 @@
-import { StatusBar } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, SafeAreaView, View, StyleSheet, Text, Image } from "react-native";
 import axios from "axios";
