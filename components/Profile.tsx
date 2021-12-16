@@ -41,7 +41,7 @@ export default function Profile({ navigation, route }) {
                     navigation.push("Profile", { id: item.id, visited: visited });
                     return true;
                 }} style={styles.item}>
-                <Image style={styles.image} source={{ uri: item.imageUrl }}/>
+                <Image style={styles.image} source={{ uri: `${item.imageUrl}?v=${item.id}` }}/>
                 <Text style={styles.textName}>{`${item.prefix} ${item.name} ${item.lastName}`}</Text>
                 <Text style={styles.textDesc}>{item.title}</Text>
             </View>
@@ -73,7 +73,7 @@ export default function Profile({ navigation, route }) {
     const listHeader = () => {
         return (
         <View>
-            <Image style={styles.image} source={{ uri: user.imageUrl }} />
+            <Image style={styles.image} source={{ uri: `${user.imageUrl}?v=${user.id}` }} />
             <Text style={styles.textName}>{`${user.prefix} ${user.name} ${user.lastName}`}</Text>
             <Text style={styles.textDesc}>{user.title}</Text>
             <VisitedList />

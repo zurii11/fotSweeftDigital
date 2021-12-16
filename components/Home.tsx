@@ -27,7 +27,7 @@ export default function Home({ navigation }) {
                     navigation.navigate("Profile", { id: item.id, visited: [] });
                     return true;
                 }} style={styles.item}>
-                <Image style={styles.image} source={{ uri: item.imageUrl }}/>
+                <Image style={styles.image} source={{ uri: `${item.imageUrl}?v=${item.id}` }}/>
                 <Text style={styles.textName}>{`${item.prefix} ${item.name} ${item.lastName}`}</Text>
                 <Text style={styles.textDesc}>{item.title}</Text>
             </View>
